@@ -40,16 +40,19 @@
 
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/wines" class="btn btn-primary">
+    <div class="btn-group btn-group-xs btn-group-middle">
+      <a class="navbar-brand" href="/wines"> 
+        <i class="fa fa-chevron-left"></i>
         Back
-      </a>
-      <a href="/wines/<%= @wine.id %>/edit" class="btn btn-warning">
+        </a>
+        <a class="navbar-brand" href="/wines/<%= @wine.id %>/edit"> 
+        <i class="fa fa-pencil"></i>
         Edit
-      </a>
-      <a href="/delete_wine/<%= @wine.id %>" class="btn btn-danger" rel="nofollow">
+        </a>
+      <a class="navbar-brand" href="/delete_wine/<%= @wine.id %>"> 
+        <i class="fa fa-trash"></i>
         Delete
-      </a>
+        </a>
     </div>
   </div>
 </div>

@@ -24,8 +24,9 @@
           Category
         </label>
 
-        <input type="text" id="category" name="category" placeholder="Category" class="form-control" value="<%= @wine.category %>">
-      </div>
+         <%= select_tag(:wine_id, options_from_collection_for_select(Wine.all, :id, :name, @wine_id), :class => "form-control") %>
+
+         </div>
 
       <!-- Label and input for name -->
       <div class="form-group">
@@ -37,13 +38,7 @@
       </div>
 
       <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @wine.user_id %>">
-      </div>
+      
 
       <!-- Label and input for fellow_imbibers -->
       <div class="form-group">
@@ -113,7 +108,11 @@
           Photo
         </label>
 
-        <input type="text" id="photo" name="photo" placeholder="Photo" class="form-control" value="<%= @wine.photo %>">
+        <input type="file" id="image" name="photo" class="form-control">
+
+        <form action="/create_user" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+        
       </div>
 
       <button class="btn btn-success">

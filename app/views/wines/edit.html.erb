@@ -37,22 +37,10 @@
       </div>
 
       <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @wine.user_id %>">
-      </div>
+      
 
       <!-- Label and input for fellow_imbibers -->
-      <div class="form-group">
-        <label for="fellow_imbibers" class="control-label">
-          Fellow imbibers
-        </label>
-
-        <textarea id="fellow_imbibers" name="fellow_imbibers" placeholder="Fellow imbibers" class="form-control" rows="3"><%= @wine.fellow_imbibers %></textarea>
-      </div>
+     
 
       <!-- Label and input for favorite -->
       <div class="checkbox">
@@ -113,7 +101,10 @@
           Photo
         </label>
 
-        <input type="text" id="photo" name="photo" placeholder="Photo" class="form-control" value="<%= @wine.photo %>">
+        <input type="file" id="image" name="photo" class="form-control">
+
+        <form action="/create_user" method="post" class="form-horizontal" enctype="multipart/form-data">
+
       </div>
 
       <button class="btn btn-warning">

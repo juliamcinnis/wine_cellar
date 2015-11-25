@@ -16,7 +16,6 @@ class WinesController < ApplicationController
     @wine.category = params[:category]
     @wine.name = params[:name]
     @wine.user_id = params[:user_id]
-    @wine.fellow_imbibers = params[:fellow_imbibers]
     @wine.favorite = params[:favorite]
     @wine.year = params[:year]
     @wine.rating = params[:rating]
@@ -26,7 +25,7 @@ class WinesController < ApplicationController
     @wine.photo = params[:photo]
 
     if @wine.save
-      redirect_to "/wines", :notice => "Wine created successfully."
+      redirect_to "/wines", :notice => "New bottle added successfully."
     else
       render 'new'
     end
@@ -42,7 +41,6 @@ class WinesController < ApplicationController
     @wine.category = params[:category]
     @wine.name = params[:name]
     @wine.user_id = params[:user_id]
-    @wine.fellow_imbibers = params[:fellow_imbibers]
     @wine.favorite = params[:favorite]
     @wine.year = params[:year]
     @wine.rating = params[:rating]
