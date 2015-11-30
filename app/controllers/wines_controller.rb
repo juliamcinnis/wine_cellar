@@ -25,7 +25,7 @@ class WinesController < ApplicationController
     @wine.photo = params[:photo]
 
     if @wine.save
-      redirect_to "/wines", :notice => "New bottle added successfully."
+      redirect_to "/wines", :notice => "New bottle added."
     else
       render 'new'
     end
@@ -63,4 +63,14 @@ class WinesController < ApplicationController
 
     redirect_to "/wines", :notice => "Wine deleted."
   end
+
+  def wine_filters
+    @wines = Wine.where(:category => params[:my_category])
+
+  end
+
 end
+
+
+
+

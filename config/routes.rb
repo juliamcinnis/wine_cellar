@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # READ
   get "/wines", :controller => "wines", :action => "index"
   get "/wines/:id", :controller => "wines", :action => "show"
+  get "/wine_filters/:my_category", :controller => "wines", :action => "wine_filters"
 
   # UPDATE
   get "/wines/:id/edit", :controller => "wines", :action => "edit"
@@ -22,19 +23,7 @@ Rails.application.routes.draw do
 
   # Routes for the Red Wine resource:
   # CREATE
-  get "/reds/new", :controller => "reds", :action => "new"
-  post "/create_red", :controller => "reds", :action => "create"
 
-  # READ
-  get "/reds", :controller => "reds", :action => "index"
-  get "/reds/:id", :controller => "reds", :action => "show"
-
-  # UPDATE
-  get "/reds/:id/edit", :controller => "reds", :action => "edit"
-  post "/update_red/:id", :controller => "reds", :action => "update"
-
-  # DELETE
-  get "/delete_red/:id", :controller => "reds", :action => "destroy"
 
     # Routes for the White Wine resource:
   # CREATE

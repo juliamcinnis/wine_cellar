@@ -14,9 +14,10 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/update_wine/<%= @wine.id %>" method="post">
+    <form action="/update_wine/<%= @wine.id %>" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
 
       <!-- Label and input for category -->
       <div class="form-group">
@@ -101,13 +102,11 @@
           Photo
         </label>
 
-        <input type="file" id="image" name="photo" class="form-control">
-
-        <form action="/create_user" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <input type="file" id="photo" name="photo" class="form-control">
 
       </div>
 
-      <button class="btn btn-warning">
+      <button class="btn btn-primary">
         Update Wine
       </button>
       or

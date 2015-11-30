@@ -24,7 +24,7 @@
           Category
         </label>
 
-         <%= select_tag(:wine_id, options_from_collection_for_select(Wine.all, :id, :name, @wine_id), :class => "form-control") %>
+         <%= select_tag(:category, options_for_select(["Red", "White", "Roses", "Bubbly"], [@wine.category]), :class => "form-control") %>
 
          </div>
 
@@ -115,7 +115,7 @@
         
       </div>
 
-      <button class="btn btn-success">
+      <button class="btn btn-primary">
         Create Wine
       </button>
       or

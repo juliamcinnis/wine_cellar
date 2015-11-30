@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    Welcome to Your Wine Cellar!
+    <%= params[:my_category] %> Wines
     <a href="/wines/new" class="btn btn-sm btn-primary">Add a Bottle</a>
   </h1>
 </div>
@@ -23,7 +23,7 @@
 
       <% @wines.each do |wine| %>
       <tr>
-        <td><img src="<%= wine.photo %>" class="img-responsive"></td>
+        <td><%= wine.photo %></td>
         <td><%= wine.favorite %></td>
         <td><%= wine.category %></td>
         <td><%= wine.name %></td>
@@ -42,5 +42,3 @@
     </table>
   </div>
 </div>
-
-
