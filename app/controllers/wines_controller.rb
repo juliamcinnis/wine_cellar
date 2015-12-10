@@ -1,7 +1,10 @@
 class WinesController < ApplicationController
   def index
     @wines = Wine.all
+
+    render('index.html.erb')
   end
+
 
   def show
     @wine = Wine.find(params[:id])
@@ -50,7 +53,7 @@ class WinesController < ApplicationController
     @wine.photo = params[:photo]
 
     if @wine.save
-      redirect_to "/wines", :notice => "Wine updated successfully."
+      redirect_to "/wines", :notice => "Wine updated."
     else
       render 'edit'
     end

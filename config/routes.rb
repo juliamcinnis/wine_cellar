@@ -21,60 +21,7 @@ Rails.application.routes.draw do
   get "/delete_wine/:id", :controller => "wines", :action => "destroy"
   #------------------------------
 
-  # Routes for the Red Wine resource:
-  # CREATE
-
-
-    # Routes for the White Wine resource:
-  # CREATE
-  get "/whites/new", :controller => "whites", :action => "new"
-  post "/create_white", :controller => "whites", :action => "create"
-
-  # READ
-  get "/whites", :controller => "whites", :action => "index"
-  get "/whites/:id", :controller => "whites", :action => "show"
-
-  # UPDATE
-  get "/whites/:id/edit", :controller => "whites", :action => "edit"
-  post "/update_white/:id", :controller => "whites", :action => "update"
-
-  # DELETE
-  get "/delete_white/:id", :controller => "whites", :action => "destroy"
-  #------------------------------
-
-    # Routes for the Wine resource:
-  # CREATE
-  get "/roses/new", :controller => "roses", :action => "new"
-  post "/create_rose", :controller => "roses", :action => "create"
-
-  # READ
-  get "/roses", :controller => "roses", :action => "index"
-  get "/roses/:id", :controller => "roses", :action => "show"
-
-  # UPDATE
-  get "/roses/:id/edit", :controller => "roses", :action => "edit"
-  post "/update_rose/:id", :controller => "roses", :action => "update"
-
-  # DELETE
-  get "/delete_rose/:id", :controller => "roses", :action => "destroy"
-  #------------------------------
-
-    # Routes for the Wine resource:
-  # CREATE
-  get "/bubbly/new", :controller => "bubbly", :action => "new"
-  post "/create_bubbly", :controller => "bubbly", :action => "create"
-
-  # READ
-  get "/bubbly", :controller => "bubbly", :action => "index"
-  get "/bubbly/:id", :controller => "bubbly", :action => "show"
-
-  # UPDATE
-  get "/bubbly/:id/edit", :controller => "bubbly", :action => "edit"
-  post "/update_bubbly/:id", :controller => "bubbly", :action => "update"
-
-  # DELETE
-  get "/delete_bubbly/:id", :controller => "bubbly", :action => "destroy"
-  #------------------------------
+ 
 
   
   # The priority is based upon order of creation: first created -> highest priority.

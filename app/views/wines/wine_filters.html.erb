@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    <%= params[:my_category] %> Wines
+    <%= params[:my_category] %> Wine
     <a href="/wines/new" class="btn btn-sm btn-primary">Add a Bottle</a>
   </h1>
 </div>
@@ -14,7 +14,7 @@
         <th>Category</th>
         <th>Name</th>
         <th>Year</th>
-        <th>Rating</th>
+        <th>Rating</th> 	
         <th>Notes</th>
         <th>Grape</th>
         <th>Country</th>
@@ -23,7 +23,7 @@
 
       <% @wines.each do |wine| %>
       <tr>
-        <td><%= wine.photo %></td>
+          <td><img src="<%= wine.photo %>" width="150" class="img-responsive"></td>
         <td><%= wine.favorite %></td>
         <td><%= wine.category %></td>
         <td><%= wine.name %></td>

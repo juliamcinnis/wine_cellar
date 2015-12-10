@@ -14,7 +14,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/create_wine" method="post">
+    <form action="/create_wine" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -24,7 +24,7 @@
           Category
         </label>
 
-         <%= select_tag(:category, options_for_select(["Red", "White", "Roses", "Bubbly"], [@wine.category]), :class => "form-control") %>
+         <%= select_tag(:category, options_for_select(["Red", "White", "Rose", "Bubbly"], [@wine.category]), :class => "form-control") %>
 
          </div>
 
@@ -41,13 +41,7 @@
       
 
       <!-- Label and input for fellow_imbibers -->
-      <div class="form-group">
-        <label for="fellow_imbibers" class="control-label">
-          Fellow imbibers
-        </label>
-
-        <textarea id="fellow_imbibers" name="fellow_imbibers" placeholder="Fellow imbibers" class="form-control" rows="3"><%= @wine.fellow_imbibers %></textarea>
-      </div>
+      
 
       <!-- Label and input for favorite -->
       <div class="checkbox">
@@ -57,6 +51,8 @@
         </label>
       </div>
 
+
+
       <!-- Label and input for year -->
       <div class="form-group">
         <label for="year" class="control-label">
@@ -64,15 +60,6 @@
         </label>
 
         <input type="text" id="year" name="year" placeholder="Year" class="form-control" value="<%= @wine.year %>">
-      </div>
-
-      <!-- Label and input for rating -->
-      <div class="form-group">
-        <label for="rating" class="control-label">
-          Rating
-        </label>
-
-        <input type="text" id="rating" name="rating" placeholder="Rating" class="form-control" value="<%= @wine.rating %>">
       </div>
 
       <!-- Label and input for notes -->
@@ -108,10 +95,9 @@
           Photo
         </label>
 
-        <input type="file" id="image" name="photo" class="form-control">
+        <input type="file" id="photo" name="photo" class="form-control">
 
         <form action="/create_user" method="post" class="form-horizontal" enctype="multipart/form-data">
-
         
       </div>
 

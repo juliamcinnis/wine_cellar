@@ -3,28 +3,25 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-s-12">
     <dl class="dl-horizontal">
+
+
+   
+      <tr>
+        <td><img src="<%= @wine.photo %>" width="150" class="img-responsive"></td>
+
       <dt>Category</dt>
       <dd><%= @wine.category %></dd>
 
       <dt>Name</dt>
       <dd><%= @wine.name %></dd>
 
-      <dt>User</dt>
-      <dd><%= @wine.user_id %></dd>
-
-      <dt>Fellow imbibers</dt>
-      <dd><%= @wine.fellow_imbibers %></dd>
-
       <dt>Favorite</dt>
       <dd><%= @wine.favorite %></dd>
 
       <dt>Year</dt>
       <dd><%= @wine.year %></dd>
-
-      <dt>Rating</dt>
-      <dd><%= @wine.rating %></dd>
 
       <dt>Notes</dt>
       <dd><%= @wine.notes %></dd>
@@ -35,12 +32,15 @@
       <dt>Country</dt>
       <dd><%= @wine.country %></dd>
 
-      <dt>Photo</dt>
-      <dd><%= @wine.photo %></dd>
+      </tr>
 
-    </dl>
+      </dl>
 
-    <div class="btn-group btn-group-xs btn-group-middle">
+      </div>
+      </div>
+
+      
+      <div class="btn-group btn-group-xs btn-group-middle">
       <a class="navbar-brand" href="/wines"> 
         <i class="fa fa-chevron-left"></i>
         Back
@@ -54,5 +54,5 @@
         Delete
         </a>
     </div>
-  </div>
-</div>
+  
+
